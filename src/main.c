@@ -6,7 +6,7 @@
 /*   By: vcohere <vcohere@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/10 13:31:15 by vcohere           #+#    #+#             */
-/*   Updated: 2015/03/11 21:21:17 by vcohere          ###   ########.fr       */
+/*   Updated: 2015/03/17 10:01:08 by vcohere          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,6 @@ static t_env	*start_env(t_env *env, char *str)
 	int			line;
 	int			endian;
 
-	bpp = 16;
-	line = XMAX;
-	endian = 0;
 	env = (t_env *)malloc(sizeof(t_env));
 	env->mlx = mlx_init();
 	env->win = mlx_new_window(env->mlx, XMAX, YMAX, "fractol");
@@ -42,6 +39,7 @@ static t_env	*start_env(t_env *env, char *str)
 	env->max_iter = 5;
 	env->pos = set_pos(env->pos);
 	env->changed = 1;
+	env->line = line;
 	return (env);
 }
 

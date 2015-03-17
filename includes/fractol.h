@@ -6,7 +6,7 @@
 /*   By: vcohere <vcohere@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/10 13:31:25 by vcohere           #+#    #+#             */
-/*   Updated: 2015/03/11 16:34:46 by vcohere          ###   ########.fr       */
+/*   Updated: 2015/03/17 13:48:22 by vcohere          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # define YMAX		600
 # define XMAX_2		400
 # define YMAX_2		300
-# define MAX		5000
+# define MAX		500
 
 typedef struct		s_pos
 {
@@ -49,6 +49,7 @@ typedef struct		s_env
 	int				pad_y;
 	int				max_iter;
 	int				changed;
+	int				line;
 	t_pos			pos;
 }					t_env;
 
